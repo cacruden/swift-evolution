@@ -93,13 +93,13 @@ public enum Troy {
 let weightTroy = [Troy.Pound(5), Troy.Ounce(4), Troy.Pennyweight(6), Troy.Grain(9)]
 
 let weightKg = weightTroy.reduce(0.00) {
-    case (acc, Troy.Pound(let quantity)):
+    case let (acc, Troy.Pound(quantity)):
         acc + Double(quantity) * 0.373
-    case (acc, Troy.Ounce(let quantity)):
+    case let (acc, Troy.Ounce(quantity)):
         acc + Double(quantity) * 0.031103
-    case (acc, Troy.Pennyweight(let quantity)):
+    case let (acc, Troy.Pennyweight(quantity)):
         acc + Double(quantity) * 0.001555
-    case (acc, Troy.Grain(let quantity)):
+    case let (acc, Troy.Grain(quantity)):
         acc + Double(quantity) * 0.0000648
     }
 }
@@ -158,13 +158,13 @@ public enum Troy {
 let weightTroy = [Troy.Pound(5), Troy.Ounce(4), Troy.Pennyweight(6), Troy.Grain(9)]
 
 let weightKg = weightTroy.reduce(0.00) {
-    case (acc, Troy.Pound(let quantity)) in
+    case let (acc, Troy.Pound(quantity)) in
         acc + Double(quantity) * 0.373
-    case (acc, Troy.Ounce(let quantity)) in
+    case let (acc, Troy.Ounce(quantity)) in
         acc + Double(quantity) * 0.031103
-    case (acc, Troy.Pennyweight(let quantity)) in
+    case let (acc, Troy.Pennyweight(quantity)) in
         acc + Double(quantity) * 0.001555
-    case (acc, Troy.Grain(let quantity)) in
+    case let (acc, Troy.Grain(quantity)) in
         acc + Double(quantity) * 0.0000648
     }
 }
